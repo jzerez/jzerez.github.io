@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Phantom by HTML5 UP</title>
+		<title>Jonathan's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,11 +19,6 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-								</a>
 
 							<!-- Nav -->
 								<nav>
@@ -51,140 +46,170 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>This is Phantom, a free, fully responsive site<br />
-								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<h1>Hi, my name is Jonathan Zerez.<br />
+								This is my portfolio.</h1>
+								<p>My name is Jonathan Zerez, and I am currently a mechanical engineering student at the Franklin W. Olin College of Engineering. I enjoy tinkering around and making cool things. I am the kind of guy who gets stuff done. Something about passion and curiosity also. </p>
+								<button class="button mech" onclick="toggle('mech')" id="mech">Mechanical</button>
+								<button class="button elec" onclick="toggle('elec')" id="elec">Electrical</button>
+								<button class="button soft" onclick="toggle('soft')" id="soft">Software</button>
 							</header>
+
+							<script>
+							var mech_bool = false
+							var elec_bool = false
+							var soft_bool = false
+							function toggle(id) {
+								var color;
+								btn = document.getElementById(id)
+								console.log(typeof(btn.style['background-color']))
+								switch(id){
+									case 'mech':
+										mech_bool = !mech_bool;
+										color = "#f2849e"
+										break;
+									case 'elec':
+										elec_bool = !elec_bool
+										color = "#3bfc68"
+										break;
+									case 'soft':
+										soft_bool = !soft_bool
+										color = "#7ecaf6"
+										break;
+								}
+								if ((btn.style['background-color'] == 'transparent') || (btn.style["background-color"] == "")) {
+									btn.style["background-color"] = color
+									btn.style["color"] = "#ffffff"
+								} else {
+									btn.style['background-color'] = 'transparent'
+									btn.style["color"] = color
+								}
+
+								filter([mech_bool, elec_bool, soft_bool])
+								console.log(mech_bool)
+							}
+
+							function filter(inputs) {
+								types = ['article.mech', 'article.elec', 'article.soft']
+								articles = document.getElementsByTagName('article')
+								for (a = 0; a < articles.length; a++) {
+									articles[a].style.display=""
+								}
+								articles = []
+								multi_class = ""
+								filter_on = false;
+								for (i = 0; i < inputs.length; i++){
+									!inputs[i] ? multi_class += types[i] + ', ' : filter_on = true;
+								}
+								console.log(multi_class.slice(0, -2))
+								articles = document.querySelectorAll(multi_class.slice(0, -2))
+
+								if (filter_on) {
+									for (a = 0; a < articles.length; a++) {
+
+											articles[a].style.display="none"
+
+									}
+								}
+							}
+							</script>
+							<br />
 							<section class="tiles">
-								<article class="style1">
+								<article class="soft">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Magna</h2>
+										<h2>Music Mashups</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>A digital signal processing project in which two songs are analyzed for BPM data and then mashed together to create a new song.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								<article class="mech">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/cycle/cycle.jpg" alt="" />
 									</span>
-									<a href="generic.html">
-										<h2>Lorem</h2>
+									<a href="projects/cycloid-drawing-machine.html">
+										<h2>The Cycloid Drawing Machine</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Made with lasercut gears and interchangable linkage arms, this machine is be able to draw fully customizable cycloids</p>
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="mech">
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="images/pedal1.JPG" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Feugiat</h2>
+										<h2>Olin Electric Motorsports-Accelerator Pedal</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Designed for Olin Electric Motorsport's third electric formula SAE racecar. This new pedal has improved geometry for increased ergonomics, a new linear potentiometer, and is lighter than previous iterations.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style4">
+								<article class="soft">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="images/project_pokemon.PNG" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Tempus</h2>
+										<h2>Project Pokemon</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>A webscraping project who's goal was to scrape Pokemon sprite images from the internet and train a GAN to generate new pokemon sprites</p>
 										</div>
 									</a>
 								</article>
-								<article class="style5">
+								<article class="soft">
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="images/pic05.png" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Aliquam</h2>
+										<h2>8 Bit Music Maker</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>A webscraping project who's goal was to scrape MIDI files from the internet and train a LSTM to produce new music</p>
 										</div>
 									</a>
 								</article>
-								<article class="style6">
+								<article class="soft">
 									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
+										<img src="images/Draco.png" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Veroeros</h2>
+										<h2>Olin Robotics Lab: Simon Says</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Using computer vision and an arduino, we're trying to make a 6 axis robot arm play simon says with the user. The robot can locate up to three colored buttons, generate a sequence to push them in, and record the user's attempts, turn by turn.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								<article class="soft">
 									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
+										<img src="images/newsblind.png" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Ipsum</h2>
+										<h2>NewsBlind</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Made for a hackathon, this project is a webapp that tries to determine if an article contains fake news or not</p>
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="soft">
 									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
+										<img src="images/flat_earth.png" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Dolor</h2>
+										<h2>Flat Earth Physics</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Have you ever wondered what it'd be like to throw a ball on flat earth? In this computer simulation, we modeled how a projectile would fly on a flat earth. Optimal parameters were calculated such that the projectile would come back to the launch site.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style1">
+								<article class="mech">
 									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
+										<img src="images/hopper/Hopper1_crop.jpg" alt="" />
 									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
+									<a href="projects/diddly-darn-double-jumper.html">
+										<h2>The Diddly Darn Double Jumper</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>Inspired by Nature's most majestic hopper: the sea cucumber, this lasercut hardboard hopper can split into two in mid-air to seemingly double jump. This project was made for a class called Design Nature</p>
 										</div>
 									</a>
 								</article>
@@ -217,13 +242,7 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
 									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
 									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
