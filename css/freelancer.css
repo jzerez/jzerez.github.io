@@ -109,6 +109,8 @@ section h2 {
     padding-bottom: 1.5rem;
     -webkit-transition: padding-top .3s, padding-bottom .3s;
     transition: padding-top .3s, padding-bottom .3s;
+    border-bottom: 1em;
+    border-bottom-color: #18bc9c;
 }
 #mainNav .navbar-brand {
     font-size: 2em;
@@ -281,6 +283,9 @@ a:active, a:focus, a:hover {
 .bg-secondary {
     background-color: #2c3e50!important;
 }
+.bg-trimary {
+  background-color: #595F72!important;
+}
 .text-primary {
     color: #18bc9c!important;
 }
@@ -358,6 +363,7 @@ a:active, a:focus, a:hover {
   justify-content: space-between;
 }
 .centered {
+  width: 100%;
   align-content: center;
   align-items: center;
   display: inline-block;
@@ -368,6 +374,9 @@ a:active, a:focus, a:hover {
   align-self: center;
   display: inline-block;
   margin: 0;
+}
+.featured{
+  background-color: #A3E7FC!important;
 }
 figcaption {
   font-style: italic;
