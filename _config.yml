@@ -1,0 +1,70 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: Jonathan Zerez
+email: jzerez@olin.edu
+description: This is my portfolio
+url: # the base hostname & protocol for your site
+keywords: ["portfolio", "projects", "engineering"]
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Jonathan Zerez
+  avatar: profile.jpg
+  job: "Mechanical Engineering C/O 2021"
+  bio: "I'm a student at the Olin College of Engineering. This website is a brief showcasing of some of the various projects I've worked on"
+  email: jzerez@olin.edu
+  disqus-shortname:
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: jzerez
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: jonathan-zerez
+  skype: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: dell-flatitude
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username
+  telegram: #username

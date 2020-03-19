@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jonathan Zerez</title>
+    <description>This is my portfolio</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>2020-03-19</pubDate>
+    <lastBuildDate>Thu, 19 Mar 2020 16:59:06 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Sponsor Tool</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../../img/sponsor-tool/sheet.jpg&quot; alt=&quot;spreadsheet&quot; /&gt;
+This is the result sheet where all of the website data found is stored.&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+&lt;p&gt;The FSAE team at Olin, Olin Electric Motorsports (OEM),  receives no money from the school, and as such, we are completely self funded. As such, reaching out to potential sponsors is a very important part of being part of the team, as they are the ones who make it all possible. However, this process is boring and time consuming. As such, I made a tool to help to automate the process.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;The tool performs 3 main tasks independently. Firstly, it takes a list of terms (ex: ‘CNC companies near Boston’) and queries google for these terms. It saves the search results from these queries in a ‘database’.&lt;/p&gt;
+
+&lt;p&gt;Secondly it takes search results for previously executed queries, and searches each domain from the list of results (BFS with priority queue to maximize odds of finding email addresses quickly). Each page that is visited has its text analyzed for certain keywords (to get a gauge on the type of website/company it is). Additionally, any email addresses that are found are stored in the ‘database’.&lt;/p&gt;
+
+&lt;p&gt;Finally, when authorized, it can/will automatically send emails to addresses that are found. Each email requires authorization from a human user to make sure we don’t spam sponsor requests to irrelevant companies whose emails we found on accident.&lt;/p&gt;
+
+&lt;h2 id=&quot;im-not-a-full-stack-developer-but-i-can-use-spreadsheets&quot;&gt;I’m not a Full Stack Developer, but I &lt;em&gt;can&lt;/em&gt; use spreadsheets&lt;/h2&gt;
+&lt;p&gt;Why did I refer to the ‘Database’ in quotes? Well, because I’m not a full stack developer, and couldn’t be bothered to make and host a working backend with a database, nor to create a nice front end, I used google sheets to host everything. Various worksheets on the spreadsheet are dedicated to information storage and retrieval, while other worksheets are used by humans in order to control the operation of the tool, such as how many pages to scrape in a single session.&lt;/p&gt;
+
+&lt;p&gt;I’m pretty happy with this solution, as it allows anyone on the team to be able to access, interact with, and use this tool without having to know python or mess with installing environments or dependencies. And, best of all, it was really easy for me!&lt;/p&gt;
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2020-03/sponsor-tool</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/sponsor-tool</guid>
+        
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Pixel Sorting</title>
+        <description>&lt;p&gt;I created this project mainly for fun. I saw some examples of pixel sorting online and thought that it would be pretty fun and easy to replicate it! The project was created in python, using primarily &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numpy&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pillow&lt;/code&gt; to open and process through images.&lt;/p&gt;
+
+&lt;p&gt;It works by opening images and converting them into numpy arrays. The user specifies a pixel attribute to evaluate (ex: pixel intensity, hue, or saturation), as well as upper and lower thresholds for that attribute. The program then iterates through each row of the the array and denotes intervals of pixels that are within those thresholds. Then, for each interval, the pixels are sorted, usually by the same attribute used for determining intervals. The result is really cool images that look like they’re melting away. Below is a gallery of my favorite image created by the script!&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/cherry_blossom_comparison.jpg&quot; alt=&quot;cherry blossoms&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/fake_temple_comparison.jpg&quot; alt=&quot;temple&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/taipei101_glitch.jpg&quot; alt=&quot;taipei 101&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/jiufen_glitch.jpg&quot; alt=&quot;jiufen&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/alley_glitch.jpg&quot; alt=&quot;alley&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/taipei_neon_city_glitch.jpg&quot; alt=&quot;neon city&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/nebula_glitch.jpg&quot; alt=&quot;nebula&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/orchid_glitch_hue.jpg&quot; alt=&quot;orchid&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/pixel-sorting/nebula1_glitch_redux.jpg&quot; alt=&quot;nebula1&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2020-03/pixel-sorting</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/pixel-sorting</guid>
+        
+        
+        <category>Software</category>
+        
+        <category>Art</category>
+        
+      </item>
+    
+      <item>
+        <title>Swarm Classification</title>
+        <description>&lt;h1 id=&quot;ant-colony-algorithm-classification&quot;&gt;Ant Colony Algorithm Classification&lt;/h1&gt;
+&lt;p&gt;In this project, we set out to recreate and expand upon Ant Miner, the Ant Colony Algorithm (ACA) for data classification originally proposed by Parpinelli et al. Specifically, they propose a method of using an ACA in order to discover rules that best discriminate between different classes present in a dataset based on measurable attributes.&lt;/p&gt;
+
+&lt;p&gt;Ant Miner is tested on various datasets from the UC Irvine Machine Learning Repository. The rulesets that are generated by Ant Miner are compared to rulesets generated by the CN2 algorithm, an established algorithm that similarly creates rulesets to classify data. Comparisons are made both in terms of rule complexity (how many terms are needed in a given rule), as well as rule quality (how well do rules actually classify the data). Through this comparison, they were able to show that Ant Miner was able to deliver classification rules that are much simpler than those of the CN2 algorithm while maintaining comparable classification accuracy.&lt;/p&gt;
+
+&lt;p&gt;The notebook displaying our work can be found &lt;a href=&quot;https://colab.research.google.com/drive/18mGb6xnA4iLevhPUI_m6uK_JP4wioOXf?fbclid=IwAR20dnvsCf_tqNAP-Ijfq0pbdjjIQwVMXoXYvsox0lpXfmgeS2rl-Phk_yM&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+&lt;p&gt;An Ant Colony Algorithm (ACA) is an agent based that simulates the natural swarming behavior of ants, namely cooperation and adaptation without direct communication. In an ACA, agents are trying to solve a given problem. The candidate solution proposed by an agent corresponds to a specific path. As the agent traverses the path, ‘pheromones’ are deposited. The amount of pheromone deposited along a path is directly related to the quality of the path, or solution. The amount of pheromones scattered along the landscape of all possible paths influences the paths of subsequent agents. While the construction of each path is ultimately stochastic, paths with high amounts of pheromone are much more likely to be followed by subsequent agents.&lt;/p&gt;
+
+&lt;p&gt;In the case for classifying sets of data, a path corresponds to a proposed rule to determine a class of data. In a dataset, there are a set of attributes common across all pieces of data, and across all attributes, there are a set of common possible values that that attribute can be. The various combinations of attributes and corresponding values makes up the landscape of possible moves from which a rule can be constructed. For instance, if we wished to classify breeds of dogs, the dataset might contain attributes such as fur type or fur color. Corresponding values could be &lt;em&gt;short/medium/long&lt;/em&gt; and &lt;em&gt;black/brown/white/mixed&lt;/em&gt;, respectively. An example rule generated in this scenario could be: “ &lt;em&gt;If the fur type is long and the fur color is white, then the dog must be a Samoyed&lt;/em&gt; “.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementation-details&quot;&gt;Implementation Details&lt;/h2&gt;
+&lt;p&gt;In our implementation, we created two classes, an Ant class and a Classification class. The Ant class represents a single ant, and contains all of the functions required for a single ant to create a ruleset. The Classification class handles the running of all ants until a minimum number of cases have been correctly classified by the created rules. The general structure of the algorithm is that an ant traverses the space of possible rules, adding a term for each attribute of the data. The terms the ant chooses are determined probabilistically by the pheromone trails left by previous ants, and a problem-dependent heuristic function. Once this ant finished creating its rule, we prune terms from it, (ie: removing redundant or detrimental terms in the rule) in order to prevent overfitting and to increase rule simplicity. Once all of the ants have created their rule, the Classification class picks the best rule (ie: the rule that best classifies part of the dataset) from the ants, and removes the pieces of data classified by the best rule from the dataset. The best rule is saved within the Classification object’s ruleset. This entire process is repeated until the Classification object’s ruleset can correctly classify a certain amount of the original dataset. We typically specified that the program must classify all but 35 pieces of data.
+In order to use an ACA to effectively classify data, additional steps must be taken. Firstly, a problem dependent heuristic is calculated given the attributes of the pieces of data that need to be classified. This heuristic seeks to quantify the normalized entropy associated with different combinations of data attributes and data classifications. In other words, this heuristic identifies attributes values of data that are highly correlated with a specific class. In a classic ACA, the probability of taking a step in a certain direction along a path is proportional to the amount of pheromone in that direction. However, in Ant Miner, the probability of taking a step in a certain direction is proportional to both the problem dependent heuristic function and the pheromones. Below is a heatmap which shows the distribution of pheromones over the state-space of attributes and corresponding options for tic-tac-toe at several timesteps. It is important to note that the state-space for most data is not rectangular like this, it just so happens that for Tic-Tac-Toe, each of the attributes (each one of the nine squares) has the same options (‘x’, ‘o’ or blank).The figure below shows how the ants explore the state space in the early stages and eventually settle on the most prominent locations towards the later stages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-classification/ACO_progression.png&quot; alt=&quot;pheromones&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ant Miner implements rule pruning, a technique quite common in classification algorithms. After a path is first generated, the agent evaluates how much each part of the solution/path contributes to the overall quality of the solution/path. If any parts of the path are redundant, or harmful to the overall quality of the path, those parts are removed, or pruned, from the path. This process is done iteratively until all path segments directly benefit the quality of the overall path. This step is important as it allows for much faster convergence of rules and allows for the removal of ‘unlucky’ steps taken by the stochastic model.&lt;/p&gt;
+
+&lt;p&gt;After pruning, the Ant’s path and its associated quality is used to update the pheromones in the Simulation.&lt;/p&gt;
+
+&lt;p&gt;For any given dataset, we take a random 80% of the data to use for training, and set aside the remaining 20% to use for testing and validating. Because this entire process is stochastic, we do this process of randomly dividing the dataset into training and testing data ten times. This allows us to calculate the average accuracy of the resulting ruleset, as well as the standard deviation of the accuracy. Additionally, it allows us to calculate the average number of rules used in the ruleset, which is a useful metric for understanding the overall complexity of the ruleset.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;We use Ant Miner to classify three sets of data from the UCI Machine Learning Repository: Tic-tac-toe, Breast Cancer (Ljubljana), and Breast Cancer (Wisconsin) Ant Miner algorithm creates rules that correctly classify 92% (+/- 2.5%) of Tic-Tac-Toe games from a set of data, correctly classify 88.7% (+/- 3.4%) of breast cancer cases (Ljubljana), and correctly classify 78.9% (+/- 4.9%) of breast cancer cases&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Data&lt;/th&gt;
+      &lt;th&gt;Percent Accuracy&lt;/th&gt;
+      &lt;th&gt;Tolerance&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tic-Tac-Toe&lt;/td&gt;
+      &lt;td&gt;72%&lt;/td&gt;
+      &lt;td&gt;+/- 4.5%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ljubljana Breast Cancer&lt;/td&gt;
+      &lt;td&gt;66.7%&lt;/td&gt;
+      &lt;td&gt;(+/- 6.8%)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Wisconsin Breast Cancer&lt;/td&gt;
+      &lt;td&gt;81.9%&lt;/td&gt;
+      &lt;td&gt;(+/- 6.3%)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h2&gt;
+&lt;p&gt;Most of the generated rulesets contain only a few rules, typically fewer than 10. Despite this fact, Ant Miner’s rulesets are able to classify data with pretty reasonable levels of accuracy. It is important to note, however, that Ant Miner’s rulesets are purely a function of the data it was trained on: the generated rulesets may be good at classifying the data, but typically fail at getting to the reasons behind a piece of data’s classification. This is easy to see in the rulesets created for classifying games of Tic-Tac-Toe. There exists a ruleset that can perfectly classify any game. However, Ant Miner will simply construct a small set of relatively simple rules that are able to classify most of the data.&lt;/p&gt;
+
+&lt;h2 id=&quot;extension&quot;&gt;Extension&lt;/h2&gt;
+&lt;p&gt;The paper we referenced used 3000 ants in their colony to classify sets of data. We were finding that we were getting similar levels of classification accuracy with far fewer ants (25). We wanted to understand how the number of ants in the simulation changed the effectiveness of the classification.&lt;/p&gt;
+
+&lt;p&gt;We swept through a series of ant colony sizes (5, 10, 15, 20, 25) and ran each colony size 20 times. This number was chosen to try and capture a good picture of the spread of the data across each colony size, but we didn’t have the time to run for many more iterations.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-classification/box_plot_breast_cancer_wisconsin.png&quot; alt=&quot;box plot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this figure, we can see that the mean value and max value are pretty consistent across all colony sizes. However, the upper and lower quartiles shrink for the higher ant colonies. This tells us that more ants leads to more consistently high prediction accuracy, however not necessarily higher accuracy. We hypothesize that Parpinelli et. al used significantly more ants because they chose to classify more complex datasets. The larger the state space of attributes and potential attribute options, the more ants you will need to sufficiently explore the space and find useful locations.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibliography&quot;&gt;Bibliography&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Data mining with an ant colony optimization algorithm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;R.S. Parpinelli, H.S. Lopes, A.A. Freitas, IEEE Transactions on Evolutionary Computation, Column: 6 Issue: 4
+https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&gt;
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2019-12/swarm-classification</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2019-12/swarm-classification</guid>
+        
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Improving Bike Networks</title>
+        <description>&lt;h1 id=&quot;investigating-methodologies-for-increasing-the-effectiveness-of-transportation-networks&quot;&gt;Investigating Methodologies for Increasing the Effectiveness of Transportation Networks&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mybinder.org/v2/gh/jzerez/BikeNetworks/master?urlpath=https%3A%2F%2Fgithub.com%2Fjzerez%2FBikeNetworks%2Fblob%2Fmaster%2Fcode%2FFinal%2520Notebook.ipynb&quot;&gt;Interactive Notebook on Binder for our project can be found here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nbviewer.jupyter.org/github/jzerez/BikeNetworks/blob/master/code/Final%20Notebook.ipynb&quot;&gt;Static Notebook for our project can be found here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We set out to understand how we can increase the effectiveness of bicycle paths in a city using the least amount of monetary and infrastructure resources. In our case, we define effectiveness to a combination of &lt;em&gt;Connectedness&lt;/em&gt; and &lt;em&gt;Directness&lt;/em&gt; of a graph. Connectedness is how many nodes are reachable from any given node, and Directness, is the ratio between the edge length between two nodes and the Euclidean distance between them. We first loaded real transportation network information for various cities into NetworkX as directed graphs. A number of different methodologies for connecting fragmented components of these graphs were used, and we measured the response of both Connectedness and Directness to each methodology. We found that a number of different methodologies that offer clear benefits over the base case of randomly connecting nodes of the graph.&lt;/p&gt;
+
+&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+&lt;p&gt;We began by collecting transportation network information for various different cities and loaded them into NetworkX. We primarily chose to analyze the qualities of the bike layer of the transportation network because each graph is very large, and considering several layers would drastically increase run time. Additionally, looking at dedicated bike paths and working to improve them is likely going to create more change than trying to integrate bike into existing road/pathways. We decided on two metrics by which to compare paths. First is Directness, which is defined as the shortest path length from node to node versus the linear Euclidian distance between those two points. This metric is similar to commute time, and helps to roughly describe how efficiently a commuter can travel between a given points A and B using a bike. If it is impossible to travel between the two nodes, then the Directness is zero. Because graphs from real street data can have thousands of nodes, we take a random sample of  250 pairs of nodes and compute the average Directness from that small sampling, and use it to describe the average Directness of the entire graph.&lt;/p&gt;
+
+&lt;p&gt;The second method we calculate is Connectedness, which is measured as how many nodes exist in the largest weakly connected cluster (LCC) divided by the total number of nodes in the graph. This answers the question “how likely is it that I can reach the node I would like to go to”. We then create several algorithms to add edges to the bike network in the effort to increase these metrics with the least amount of added path length. The first method is the Largest-to-Second (L2S) algorithm. This algorithm finds all of the weakly connected subgraphs in the overall bike MiltiDiGraph and ranks them by size, then connects the largest subgraph to the second largest. Then it connects the second largest to the third largest and so on. Next is Largest-to-Closest (L2C) which finds and sorts the subgraphs then connects the largest one to the closest subgraph to it, then connects the second largest subgraph to the closest subgraph to it and so on. Next is Random-to-Closest (R2C) which connects a random subgraph to it’s closest graph, repeats for n number of desired edges to be added. Last is the Overall Closest algorithm which connects the closest subgraphs for n number of desired edges.&lt;/p&gt;
+
+&lt;p&gt;Original Amsterdam Graph&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/amsterdam.png&quot; alt=&quot;Amsterdam Original&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/amsterdam_L2S.png&quot; alt=&quot;Amsterdam Modified&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/detroit_L2S.png&quot; alt=&quot;Detroit Graph: Largest to Second Largest&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/detroit_L2C.png&quot; alt=&quot;Detroit Graph: Largest to Closest&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We implement these algorithms by defining a total amount of road to add (in meters) and then the algorithms either added paths until the sum of added lengths exceeds the defined amount, or until the graph is completely connected. We measure the Directness &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Cfrac%7BL_%7Bpath%7D%7D%7BL_%7Bcrow%7D%7D%20&quot; alt=&quot;\frac{L_{path}}{L_{crow}} &quot; /&gt; and Connectedness &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Cfrac%7BN_%7BLCC%7D%7D%7BN_%7BTotal%7D%7D%20&quot; alt=&quot;\frac{N_{LCC}}{N_{Total}} &quot; /&gt; at each step and plot the length of road added vs Directness and Connectedness. We also chose to only use the L2S, L2C, and R2C methods because the Closest Overall method takes a very long time to run for large cities.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;../../img/bike-networks/Detroit_Compiled.png&quot; alt=&quot;Detroit Graph: Compiled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For Connectedness, we are seeing that the L2C algorithm creates a completely connected graph adding only 20 km of road, whereas the L2S algorithm needs nearly 35 km of road to become connected. The random graph does not usefully add roads, and only slightly makes the graph more connected.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/Copenhagen_Compiled_edited.png&quot; alt=&quot;Copenhagen Graph: Compiled&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/bike-networks/Manhattan_Compiled.png&quot; alt=&quot;Manhattan Graph: Compiled&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We ran the same Connectedness analysis for Copenhagen and Manhattan to both compare how the algorithms perform on different cities, and to look more bike-friendly cities like Copenhagen can become more connected. For Copenhagen we only added 5km of road because the clusters are generally closer together, and for run-time purposes.&lt;/p&gt;
+
+&lt;p&gt;For Directness, we see that each algorithm generally follow the same trend shapes as the corresponding LCC graph. The exception to this is the behavior of the R2C algorithm, which performs better than even the L2S algorithm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/bike-networks/directness_detroit.png&quot; alt=&quot;Detroit Graph: Compiled Directness&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;interpretation&quot;&gt;Interpretation&lt;/h2&gt;
+&lt;p&gt;The graphs show that, in general, the proposed L2C and L2S algorithms are much more effective at improving the Connectedness and Directness of bike transportation networks in cities, relative to randomly connecting components such as in the R2C algorithm. The L2C algorithm adds the paths most efficiently in terms of Connectedness, as it requires the least amount of road to achieve high levels of Connectedness (&amp;gt;90%). For Manhattan and Copenhagen, both the L2S and L2C algorithms have similar performance. They both solidly outperform randomly connecting nodes but don’t have much differentiation for initial rise in Connectedness. Our hypothesis for this behavior is that both Manhattan and Copenhagen have relatively short distances between their major clusters to begin with, so very often the second-largest subgraph is very close to the largest subgraph already, whereas Detroit has very spaced out subgraphs to begin with, so it is more effective to chain along the closest ones rather than jump across the city to connect larger subgraphs. It is interesting to note that the Manhattan R2C LCC graph did converge to complete by the end. We noticed this as an artifact of the randomness, sometimes the random graph would connect the largest nodes out of chance and that tends to snowball into more connected random graphs, but the initial slope of Connectedness vs invested roads is still very low and so not as effective as the other methods.&lt;/p&gt;
+
+&lt;p&gt;In general, the shape of the LCC graphs are quite similar to the shape of the Directness graphs. This makes logical sense that these two metrics produce very similar responses. As the fraction of total nodes of the graph contained within the largest component increase, it makes sense that the average Directness of any path would also increase. The fact that these two graphs of different metrics display very similar responses suggests that we adequately sample enough pairs of nodes in when calculating the average Directness of the entire graph. The exception to this trend is the R2C algorithm applied to Detroit. We are unsure why this is the case, but attribute part of the difference to the random choice of nodes to sample.&lt;/p&gt;
+
+&lt;p&gt;It is not our place to determine what parameter, Connectedness or Directness, should be held in higher regard, as that evaluation is likely a function of many additional variables that are not captured in our model. Factors such as the geographic layout of the city, prevalence of additional transportation modes, and the willingness of the population to adopt cycling as a means of transportation are all important when considering what method of adding edges is “best”. Directness and Connectedness are traits that are just generally considered good within a transportation network and offer a relatively consistent means of comparing methods.&lt;/p&gt;
+
+&lt;h2 id=&quot;extension&quot;&gt;Extension&lt;/h2&gt;
+&lt;p&gt;The cost of adding additional edges to a city’s existing bicycle transportation network is orders of magnitude less expensive than adding edges to other transportation networks. Each new mile of bike lane built costs at most $50,000, while each new mile of road built costs about two million dollars at the cheapest. Bike transportation is also better for the environment, and can lower traffic levels, as it is a denser form of transportation relative to cars. Given these clear benefits, it is strange how most cities choose not to invest more money into developing their bicycle infrastructure. We decided to try to re-quantify just how effective each strategy for adding bike paths is, taking into account how friendly a given population is to biking over driving. In other words, we wanted to quantify the use of the bike network over the car network as more and more paths were added to the bike network. Apart from public transportation in the form of trains, driving is likely the largest single alternative to biking, which is why we chose it as the ‘alternative’ method of transportation that citizens must choose between.&lt;/p&gt;
+
+&lt;h2 id=&quot;methodology-1&quot;&gt;Methodology&lt;/h2&gt;
+&lt;p&gt;In order to see how effective each method is at increasing bike ridership, we implemented a threshold value representing how bike friendly an individual is. On one extreme, the individual will always bike between two locations, regardless of how long the bike path is. On the other extreme, the individual will always drive between two locations. In the middle is the pragmatic individual, who decides purely on the most efficient route. To implement this behavior, we weight the path lengths of taking a car versus a bike by the bike friendly parameter, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha&quot; alt=&quot;\alpha&quot; /&gt;, which ranges from zero to one, where &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%200&quot; alt=&quot;\alpha = 0&quot; /&gt; means that the user will always bike, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%201&quot; alt=&quot;\alpha = 1&quot; /&gt;  means that the user will always drive, and &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%200.5&quot; alt=&quot;\alpha = 0.5&quot; /&gt;  means the user will be the perfect pragmatist.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bbike%7D'%20%3D%20L_%7Bbike%7D%20*%20(1-%5Calpha)&quot; alt=&quot;L_{bike}' = L_{bike} \dot (1-\alpha)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bcar%7D'%20%3D%20L_%7Bcar%7D*%5Calpha&quot; alt=&quot;L_{car}' = L_{car}\dot\alpha&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bbike%7D&quot; alt=&quot;L_{bike}&quot; /&gt; is the length of the bike path, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bcar%7D&quot; alt=&quot;L_{car}&quot; /&gt; is the length of the car path. After the weight to each route is applied, the user then chooses the shorter of the two weighted paths. In order to get an idea for the average length of car and bike paths, we compared the reciprocal of the average directness of each method of transportation.&lt;/p&gt;
+
+&lt;p&gt;For a given threshold value, we can determine whether an individual will decide to bike or drive between two nodes given the relative Directness of each route. As more and more paths are added to the bicycle network, this ratio slowly changes to be in favor of the bicycle route. After each path addition, we calculate what threshold value is required for a user to decide to bike between the given nodes.&lt;/p&gt;
+
+&lt;h2 id=&quot;results-1&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;As expected, as the total length of bicycle network increases, the threshold required for an individual to decide to bike becomes lower and lower. Also unsurprisingly, as paths are added, individuals threshold values on the extremes of the spectrum do not change their behavior as more and more bike paths are added. In general, the shape of the trend follows roughly the same trend as both Directness and Connectedness.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/bike-networks/threshold2.png&quot; alt=&quot;Threshold Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This plot shows for each length of bike path added, and for a given threshold value, whether a commuter will bike or not. The dark purple color represents driving, and the yellow color represents biking. For most thresholds (ex: 0.5), adding more bike routes does not change whether a bike is taken or not.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/bike-networks/threshold.png&quot; alt=&quot;Threshold Colormap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This plot shows the required threshold for someone to bike a route given the current state of the graph.&lt;/p&gt;
+
+&lt;h2 id=&quot;interpretation-1&quot;&gt;Interpretation&lt;/h2&gt;
+&lt;p&gt;These results show two main interesting insights. Firstly, the shape of the curve the diminishing returns of adding additional paths to the bike layer, similarly to the Directness and Connectedness graphs. As more and more edges get created, the threshold for riding a bike decreases less and less. This would be important information for a city, as it would inform when to stop investing in building up the existing bicycle infrastructure.&lt;/p&gt;
+
+&lt;p&gt;More importantly, the graphs clearly highlight a potential reason why cities aren’t jumping to build up their bicycle networks, despite its numerous benefits. Adding additional bike paths really only makes a difference in bicycle usage for a small range of threshold values. Typically, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha&quot; alt=&quot;\alpha&quot; /&gt; varies by about 0.15 as more and more edges are added. Depending on the average threshold value for a population, or the distribution of the threshold value over the population, it could potentially not make much sense to build up the bicycle network, especially if the goal of such development is to increase ridership rates. If a city is already very bicycle friendly, then adding additional paths will not increase ridership rates: most people choose to bike regardless of whether there is extra Connectedness or Directness. On the other end of the spectrum, if a city is already very car friendly, and has a very well connected car transportation network, it will take an exceedingly large number of bike lane additions to convince people to bike rather than drive.&lt;/p&gt;
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2019-10/improving-bike-networks</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2019-10/improving-bike-networks</guid>
+        
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Optimum J</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2019-08/optimum-j</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2019-08/optimum-j</guid>
+        
+        
+        <category>Mechanical</category>
+        
+        <category>Simulation</category>
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>FSAE Anti Roll Bar</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</guid>
+        
+        
+        <category>Mechanical</category>
+        
+      </item>
+    
+      <item>
+        <title>3D Mouse Mobile App</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</guid>
+        
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Neato Slam</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2018-12/neato-slam</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-12/neato-slam</guid>
+        
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>CNC Stringart</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2018-12/CNC-stringart</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-12/CNC-stringart</guid>
+        
+        
+        <category>Mechanical</category>
+        
+        <category>Art</category>
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Inverted Pendulum PID</title>
+        <description>
+</description>
+        <pubDate>2020-03-19</pubDate>
+        <link>http://localhost:4000/articles/2018-11/inverted-pendulum-PID</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018-11/inverted-pendulum-PID</guid>
+        
+        
+        <category>Mechanical</category>
+        
+        <category>Software</category>
+        
+      </item>
+    
+  </channel>
+</rss>

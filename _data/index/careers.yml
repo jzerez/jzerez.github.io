@@ -1,0 +1,20 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+
+- name: Amazon Robotics
+  link: https://www.amazonroboics.com
+  date: May 2020 - August 2020
+  job: Mechanical Engineering Intern
+  desc: TBD!
+
+- name: Thirty Meter Telescope International Observatory
+  link: https://www.tmt.org
+  date: June 2019 - August 2019
+  job: Mechanical Engineering Intern
+  desc: Created MATLAB tool to perform data acqusition and analysis for vibrational testing for telescope test structure.
+
+- name: Second Half Finance (Formerly Track.com)
+  link: https://www.secondhalf.com
+  date: June 2018 - August 2018
+  job: Full Stack Intern
+  desc: Created MySQL database and mobile app using React Native to allow users to keep track of their personal data. 
