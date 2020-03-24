@@ -8,5 +8,5 @@ date_string: December, 2018
 image: 3D-mouse-mobile-app/logo.jpg
 alt: pic02.jpg
 github: https://github.com/hyegibang/MouseRemote
-website: https://hyegibang.github.io/MouseRemote/
+website: https://hyegibang.github.io/MouseRemote
 ---

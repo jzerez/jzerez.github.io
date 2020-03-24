@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-post
 ---
 
 <a class="btn" href= "{{ site.url }}/" >
@@ -30,6 +30,10 @@ layout: default
     {% if page.github %}
     <a href="{{ page.github }}" class="btn" title="View on Github"><i class="fa fa-github"></i><span style="padding: 10px">View on Github</span></a>
     {% endif %}
+    {% if page.instagram %}
+    <a href="{{ page.instagram }}" class="btn" title="Instagram"><i class="fa fa-instagram"></i><span style="padding: 10px">Showcase</span></a>
+    {% endif %}
+
     {% if page.website %}
     <a href="{{ page.website }}" class="btn" title="Project Website"><i class="fa fa-link"></i><span style="padding: 10px">Project Website</span></a>
     {% endif %}

@@ -5,8 +5,8 @@
     <description>This is my portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-03-19</pubDate>
-    <lastBuildDate>Thu, 19 Mar 2020 17:08:47 +0800</lastBuildDate>
+    <pubDate>2020-03-24</pubDate>
+    <lastBuildDate>Tue, 24 Mar 2020 10:58:15 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -29,7 +29,7 @@ This is the result sheet where all of the website data found is stored.&lt;/p&gt
 
 &lt;p&gt;I’m pretty happy with this solution, as it allows anyone on the team to be able to access, interact with, and use this tool without having to know python or mess with installing environments or dependencies. And, best of all, it was really easy for me!&lt;/p&gt;
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2020-03/sponsor-tool</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-03/sponsor-tool</guid>
         
@@ -64,7 +64,7 @@ This is the result sheet where all of the website data found is stored.&lt;/p&gt
   &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2020-03/pixel-sorting</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-03/pixel-sorting</guid>
         
@@ -149,7 +149,7 @@ In order to use an ACA to effectively classify data, additional steps must be ta
 &lt;p&gt;R.S. Parpinelli, H.S. Lopes, A.A. Freitas, IEEE Transactions on Evolutionary Computation, Column: 6 Issue: 4
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&gt;
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2019-12/swarm-classification</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-12/swarm-classification</guid>
         
@@ -247,7 +247,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
 
 &lt;p&gt;More importantly, the graphs clearly highlight a potential reason why cities aren’t jumping to build up their bicycle networks, despite its numerous benefits. Adding additional bike paths really only makes a difference in bicycle usage for a small range of threshold values. Typically, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha&quot; alt=&quot;\alpha&quot; /&gt; varies by about 0.15 as more and more edges are added. Depending on the average threshold value for a population, or the distribution of the threshold value over the population, it could potentially not make much sense to build up the bicycle network, especially if the goal of such development is to increase ridership rates. If a city is already very bicycle friendly, then adding additional paths will not increase ridership rates: most people choose to bike regardless of whether there is extra Connectedness or Directness. On the other end of the spectrum, if a city is already very car friendly, and has a very well connected car transportation network, it will take an exceedingly large number of bike lane additions to convince people to bike rather than drive.&lt;/p&gt;
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2019-10/improving-bike-networks</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-10/improving-bike-networks</guid>
         
@@ -260,7 +260,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>Optimum J</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2019-08/optimum-j</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-08/optimum-j</guid>
         
@@ -277,7 +277,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>FSAE Anti Roll Bar</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</guid>
         
@@ -290,7 +290,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>3D Mouse Mobile App</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</guid>
         
@@ -303,7 +303,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>Neato Slam</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-12/neato-slam</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-12/neato-slam</guid>
         
@@ -316,7 +316,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>CNC Stringart</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-12/CNC-stringart</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-12/CNC-stringart</guid>
         
@@ -333,7 +333,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
         <title>Inverted Pendulum PID</title>
         <description>
 </description>
-        <pubDate>2020-03-19</pubDate>
+        <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-11/inverted-pendulum-PID</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-11/inverted-pendulum-PID</guid>
         

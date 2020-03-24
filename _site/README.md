@@ -11,3 +11,8 @@ or
 `jekyll server`
 
 I'm not actually sure what the difference is, but they both work lol
+
+## Fixing gemfile
+* change specified version in gemfile.lock
+* `bundle install`
+* `bundle update`

@@ -638,6 +638,7 @@ ul.tag-cloud li a.post-tag { border-radius: 0.2em; }
 @media only screen and (min-width: 600px) { .post-listing { padding: 50px 30px 0; } }
 @media only screen and (min-width: 992px) { .post-listing { height: 100vh; overflow-y: scroll; position: initial; top: 0; } }
 
+@media only screen and (max-width: 600px) { .post-listing { position: inherit; } }
 .image-credit { float: right; font-weight: bold; font-style: italic; color: #09ABF6; font-size: 13px; padding-right: 20px; }
 
 table { table-layout: fixed; }
@@ -646,6 +647,8 @@ section.post { margin-bottom: 1.2em 0; border-top: solid; border-top-width: medi
 
 div.post { display: flex; align-items: flex-start; }
 
+@media only screen and (max-width: 600px) { div.post { display: block; } }
+@media only screen and (max-width: 600px) { #static-mobile { display: none; } }
 div.post-description { word-break: break-word; }
 
 div.post-image { margin: 1.2em; height: 15em; display: flex; justify-content: center; align-items: center; }

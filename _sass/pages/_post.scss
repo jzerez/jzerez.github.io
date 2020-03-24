@@ -19,6 +19,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .post-listing {
+    position: inherit;
+  }
+}
+
 .image-credit {
   float: right;
   font-weight: bold;
@@ -43,6 +49,18 @@ section.post {
 div.post {
   display: flex;
   align-items: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  div.post {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #static-mobile {
+    display: none;
+  }
 }
 
 div.post-description {

@@ -8,6 +8,7 @@ date_string: March, 2020
 image: cherry_blossom_glitch.jpg
 alt: pic05.jpg
 github: https://github.com/jzerez/pixel_sorting
+instagram: https://www.instagram.com/zomogr.art/
 ---
 I created this project mainly for fun. I saw some examples of pixel sorting online and thought that it would be pretty fun and easy to replicate it! The project was created in python, using primarily `numpy` and `pillow` to open and process through images.
 
