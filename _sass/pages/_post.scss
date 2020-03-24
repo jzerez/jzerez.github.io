@@ -19,6 +19,15 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .mobile {
+    position: inherit;
+  }
+  .mobile-hide {
+    display: none;
+  }
+}
+
 .image-credit {
   float: right;
   font-weight: bold;
