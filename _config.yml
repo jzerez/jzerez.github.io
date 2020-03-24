@@ -27,7 +27,7 @@ kramdown:
   enable_coderay: false
 
 defaults:
-  - scope:
+  scope:
     path: "assets/"
   values:
     pdf: true
