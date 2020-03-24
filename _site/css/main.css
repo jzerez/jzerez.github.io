@@ -640,8 +640,8 @@ ul.tag-cloud li a.post-tag { border-radius: 0.2em; }
 
 @media only screen and (max-width: 600px) { .mobile { position: inherit; }
   .mobile-hide { display: none; }
-  .mobile-listing { top: 220px; }
-  .mobile-header-listing { min-height: 200px; } }
+  .mobile-listing { top: 250px; }
+  .mobile-header-listing { min-height: 220px; } }
 .image-credit { float: right; font-weight: bold; font-style: italic; color: #09ABF6; font-size: 13px; padding-right: 20px; }
 
 table { table-layout: fixed; }

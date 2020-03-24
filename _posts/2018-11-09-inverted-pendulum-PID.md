@@ -5,6 +5,7 @@ excerpt: A partner and I created and tuned a PID controller to effectively maneu
 short_desc: Implemented a PID controller to keep segway-like robot standing
 categories: [Mechanical, Software]
 date_string: November, 2018
-image:
+image: ../../img/inverted-pendulum-PID/rocky.png
 alt: pic05.jpg
+report: ../../assets/QEA_Rocky_Report.pdf
 ---

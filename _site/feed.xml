@@ -6,7 +6,7 @@
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-24</pubDate>
-    <lastBuildDate>Tue, 24 Mar 2020 12:36:30 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 15:36:57 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -275,7 +275,12 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
     
       <item>
         <title>FSAE Anti Roll Bar</title>
-        <description>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;An anti-roll bar, also known as an anti-sway bar, is a linkage that is used in vehicle suspensions that increases the roll stiffness of the suspension independently of the ride stiffness. By uncoupling the roll stiffness and ride stiffness of the suspension, it allows for more flexible suspension characteristics. If properly designed, an anti-roll bar can also be used to tune the roll stiffness of the vehicle to match the track or the preferences of the driver.&lt;/p&gt;
+
+&lt;p&gt;The anti-roll bar that I designed had a geometry that integrated well with the rest of the chassis and exsisting suspension system. All chassis mounting points were close to nodes of the chassis to minimize local deflection, and the various linkages in the system were positioned to reduce bending moments and to result in desirable and consistent motion ratios. The anti-roll bar is based around an aluminum tube that is used as a torsional spring that connects the left suspension with the right suspension.&lt;/p&gt;
+
+&lt;h2 id=&quot;high-level-design-with-matlab&quot;&gt;High level design with MATLAB&lt;/h2&gt;
 </description>
         <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</link>
@@ -288,7 +293,24 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
     
       <item>
         <title>3D Mouse Mobile App</title>
-        <description>
+        <description>&lt;p&gt;&lt;img src=&quot;../../img/3D-mouse-mobile-app/CAD_buddy.gif&quot; alt=&quot;demo-gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-it-does&quot;&gt;What it does&lt;/h2&gt;
+&lt;p&gt;A partner and I created a mobile app that could turn a phone into a 3D mouse for Solidworks! The coolest feature of the project is the ability to interact with 3D CAD models by rotating the phone. There were two modes to this form of control. In the first mode (demonstrated in the gif above), the orientation of the CAD model on the screen matched the orientation of the phone. In the second mode, rotating around the model was toggled by tilting the phone past certain thresholds (ie: tilt the phone to the left to rotate the part to the left, hold the phone flat to keep the model stationary in the current position).&lt;/p&gt;
+
+&lt;p&gt;What’s more, the app also is able to detect what Solidworks activity (ex: sketch, part, or assembly) the user is in. This allows us to display relevant shortcuts on the screen of the phone that correctly activate the corresponding Solidworks action on the computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;There is a system of two way communication over server sockets that allows that phone and the computer to communicate with each other. The phone streams orientation and gyroscope data to a python script running on the computer, as well as any button presses in the app. The script parses the orientation data, and correctly changes the orientation of the current CAD model (if applicable). Any button presses in the app also are parsed by the script and triggers the correct Solidworks actions.&lt;/p&gt;
+
+&lt;p&gt;In turn, the computer sends over information about the current activity in Solidworks to the app on the phone. This information allows the phone to dynamically update the shortcuts it displays to always be relevant. Below is a system architecture diagram that shows how data flows in the project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/3D-mouse-mobile-app/System_Architecture.jpg&quot; alt=&quot;system_architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;is-it-useful&quot;&gt;Is it useful?&lt;/h2&gt;
+&lt;p&gt;Well… &lt;em&gt;kinda&lt;/em&gt;… As someone who is very comfortable and proficient with CADing in the ‘traditional’ sense, I wouldn’t use this. That being said, I would say that it is a decent start. The idea of a device that consolidates CAD shortcuts and has the ability to change the view of the CAD model is nothing new: see &lt;a href=&quot;https://www.3dconnexion.com/spacemouse_pro/en/&quot;&gt;3Dconnexion’s SpaceMouse Pro&lt;/a&gt;. While this project is nowhere as polished, it achieves a similar outcome at a fraction of the cost to the user.&lt;/p&gt;
+
+&lt;p&gt;That being said, we made this project with the intention of helping users who are newer to CAD. The phone allows the user to more intuitively interact with the model. Additionally, the shortcuts that are displayed on the phone screen can help users better understand the common actions that one would take given the activity they’re in. This is a common challenge we found with rookie CADers: because Solidworks has so many tools, it can be daunting to find the right tools, even just for simple tasks. The phone helps to consolidate all of the most common commands for the given activity in one place in order to streamline the process. We took our project and demonstrated it to engineers and product managers at Dassault, the makers of Solidworks, and they thought it had great potential, offering us the opportunity to work on the project as interns over the summer! Unfortunately, we already had other jobs, but it was cool to get that form of validation for our idea.&lt;/p&gt;
 </description>
         <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</link>
@@ -301,7 +323,42 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
     
       <item>
         <title>Neato Slam</title>
-        <description>
+        <description>&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+&lt;p&gt;This project was a culmination of various different analysis techniques learned in the class: “Quantitative Engineering Analysis”. I partner and I wrote a MATLAB script allows a robotic vacuum cleaner called a NEATO to perform SLAM, or Simultaneous Localization and Mapping. Using 2D LIDAR information and wheel encoder odometry, we attempted to navigate and map a closed loop course denoted by a series of plastic cups. Below is a gif demonstrating the robot, and some of the analysis it does in action!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/demo.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How it works&lt;/h3&gt;
+
+&lt;p&gt;This project utilized a bunch of really cool analysis techniques. The robot first took a scan of the environment, and then using a cluster detection and feature extraction algorithm that I wrote, we were able to determine the location of cup relative to the robot. The robot then used the encoder information to translate and rotate the points that it scanned into the global coordinate system. Then, using a Bayesian correspondence detector that I developed, we were able to determine which points corresponded to new cups, and which points corresponded to previously observed cups. Finally, using my implementation of the Iterative Closest Points algorithm, we were able to finely reconcile the information contained in the new scan, with the existing global map, and line up corresponding points as best as possible. More information can be found in our &lt;a href=&quot;../../assets/QEA_CYOA_Final_Report.pdf&quot;&gt;final report&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gallery&quot;&gt;Gallery&lt;/h3&gt;
+
+&lt;p&gt;This project produced some pretty cool images and figures, which are shown off below&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/cluster1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first state of incoming LIDAR information. This is just raw, unfiltered 2D point clusters&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/cluster2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first stage of cluster detection is filtering out points that are simply too far away to get an accurate reading of. Points of potential interest are highlighted here in red&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/cluster3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This figure shows actual cluster detection happening. Different clusters are identified based on variance in the distance between neighboring points.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/cluster4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This figure shows feature extraction once cluster detection is performed. Clusters that are circular and roughly the same size as cones are abstracted to their geometric centers, represented here by black asterisks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/probs.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This figure shows the relative likelihood of an old cup in any given location given the locations of currently known cups on the top. On the bottom, the figure shows the relative likelihood of a new cup in any given location given the locations of currently known cups. Super-imposed on each plot is a picture of the physical set up. The third cone was not picked up by the LIDAR sensor, but the algorithm is smart enough to know where there is likely a cup.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/NEATO-SLAM/final.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A look at a developed likelihood distribution gradient and global map of previously observed cups.&lt;/p&gt;
 </description>
         <pubDate>2020-03-24</pubDate>
         <link>http://localhost:4000/articles/2018-12/neato-slam</link>
