@@ -4,6 +4,7 @@ title: Swarm Classification
 excerpt: In this project, a partner and I set out to recreate and expand upon Ant Miner, the Ant Colony Algorithm (ACA) for data classification originally proposed by Parpinelli et al. Specifically, they propose a method of using an ACA in order to discover rules that best discriminate between different classes present in a dataset based on measurable attributes.
 short_desc: A project about using an Ant Colony Algorithm to classify sets of data
 categories: [Software]
+featured: true
 date_string: December, 2019
 image:
 alt: pic04.jpg

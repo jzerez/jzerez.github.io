@@ -28,7 +28,7 @@ else:
 project_name = sys.argv[1]
 
 alt_images = ['pic02.jpg', 'pic03.jpg', 'pic04.jpg', 'pic05.jpg', 'pic06.jpg']
-categories = ['layout', 'title', 'excerpt', 'short_desc', 'categories', 'date_string', 'image', 'alt', 'github']
+categories = ['layout', 'title', 'excerpt', 'short_desc', 'categories', 'featured', 'date_string', 'image', 'alt', 'github']
 months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 id = get_last_post(path, project_name) + 1;
 

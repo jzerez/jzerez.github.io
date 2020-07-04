@@ -4,6 +4,7 @@ title: Sponsor Tool
 excerpt: A python tool I created for automating the process of reaching out to potential sponsors for the Formula SAE team at Olin. It is able to perform google searches, scrape the websites returned by the search for emails, and store emails. It interfaces with Google Sheets for easy data storage without needed a hosted database, and to allow team members to easily interact with the program without knowing python.
 short_desc: A web crawler that finds emails of potential sponsors for the Formula SAE team at Olin
 categories: [Software]
+featured: false
 date_string: March, 2020
 image: sponsor-tool/sheet.jpg
 alt: pic02.jpg

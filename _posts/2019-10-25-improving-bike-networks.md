@@ -4,6 +4,7 @@ title: Improving Bike Networks
 excerpt: In this project, a partner and I set out to investigate various methods and strategies for increase the effectiveness of bicycle paths in a city using the least amount of monetary and infrastructure resources. We evaluated the effectiveness of each strategies on data from real street networks.
 short_desc: A project to investigate strategies to best improve transportation networks
 categories: [Software]
+featured: true
 date_string: October, 2019
 image: bike-networks/network.jpg
 alt: pic06.jpg

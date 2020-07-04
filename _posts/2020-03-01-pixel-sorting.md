@@ -4,6 +4,7 @@ title: Pixel Sorting
 excerpt: "This computational art project allows you to create glitchy looking images through pixel sorting. In pixel sorting, you first iterate through the image, and identify intervals of pixels that fall within a certain threshold for some value (ex: pixel intensity). Afterwards, you sort the pixels within each interval."
 short_desc: "A computational art project to make images look  [G L I T C H Y]"
 categories: [Software, Art]
+featured: false
 date_string: March, 2020
 image: cherry_blossom_glitch.jpg
 alt: pic05.jpg
