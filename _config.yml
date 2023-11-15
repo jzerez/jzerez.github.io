@@ -38,9 +38,9 @@ defaults:
 #
 owner:
   name: Jonathan Zerez
-  avatar: profile.jpg
-  job: "Mechanical Engineering C/O 2021"
-  bio: "I'm a student at the Olin College of Engineering. This website is a brief showcasing of some of the various projects I've worked on"
+  avatar: profile_new.jpg
+  job: "Mechanical Design Engineer @ Amazon Robotics"
+  bio: "I'm a mechanical engineer interested in computational simulation, optimization, and design automation. This website is a brief showcasing of some of the various projects I've worked on"
   email: jzerez@olin.edu
   disqus-shortname:
   twitter: #username
@@ -58,7 +58,7 @@ owner:
   linkedin: jonathan-zerez
   skype: #username
   xing: #username
-  instagram: zomogr.art
+  instagram: #zomogr.art
   lastfm: #username
   tumblr: #username
   pinterest: #username
@@ -66,7 +66,7 @@ owner:
   steam: #username
   dribbble: #username
   youtube: #username
-  soundcloud: dell-flatitude
+  soundcloud: #dell-flatitude
   weibo: #username
   flickr: #username
   500px: #username

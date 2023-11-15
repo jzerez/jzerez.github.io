@@ -1,5 +1,10 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Amazon Robotics
+  link: https://www.amazonroboics.com
+  date: August 2021 - Current
+  job: Mechanical Design Engineer
+  desc: Developing mechanical components and sensing system for Amazon's first fully autonomous mobile robot
 
 - name: Amazon Robotics
   link: https://www.amazonroboics.com
@@ -11,10 +16,10 @@
   link: https://www.tmt.org
   date: June 2019 - August 2019
   job: Mechanical Engineering Intern
-  desc: Created MATLAB tool to perform data acqusition and analysis for vibrational testing for telescope test structure.
+  desc: Created MATLAB tool to perform data acquisition and analysis for vibrational testing for telescope test structure.
 
-- name: Second Half Finance (Formerly Track.com)
-  link: https://www.secondhalf.com
+- name: Track.com
+  link: https://www.track.com
   date: June 2018 - August 2018
   job: Full Stack Intern
   desc: Created MySQL database and mobile app using React Native to allow users to keep track of their personal data.

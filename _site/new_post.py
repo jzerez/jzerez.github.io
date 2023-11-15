@@ -1,5 +1,6 @@
 import sys
 from os import listdir
+from os import mkdir
 import datetime
 import random
 def get_last_post(path, new_name):
@@ -29,9 +30,11 @@ project_name = sys.argv[1]
 
 alt_images = ['pic02.jpg', 'pic03.jpg', 'pic04.jpg', 'pic05.jpg', 'pic06.jpg']
 categories = ['layout', 'title', 'excerpt', 'short_desc', 'categories', 'featured', 'date_string', 'image', 'alt', 'github']
-months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-id = get_last_post(path, project_name) + 1;
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+id = get_last_post(path, project_name) + 1
 
+
+mkdir("./img/" + project_name)
 filename = str(date)+'-'+project_name+'.md'
 full_filename = path + filename
 file = open(full_filename, 'x')

@@ -17,7 +17,7 @@ permalink: /archive/
       {% for post in group.items %}
         <li>
           <div style="width:60px;float:left;">
-            {{ post.date | date: "%b %-d" }}
+            {{ post.date | date: "%b" }}
           </div>
           <strong>
             <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>

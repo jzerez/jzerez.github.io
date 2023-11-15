@@ -5,9 +5,225 @@
     <description>This is my portfolio</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-07-10</pubDate>
-    <lastBuildDate>Fri, 10 Jul 2020 17:35:24 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>2023-11-14</pubDate>
+    <lastBuildDate>Tue, 14 Nov 2023 21:54:39 -0500</lastBuildDate>
+    <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Proteus-Amazon&apos;s first fully autonomous mobile robot</title>
+        <description>&lt;p&gt;&lt;em&gt;Disclaimer: This product is still under development and I’m limited in what I can share due to NDA. All pictures on this site are taken from publicly available media officially released by Amazon&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/wide1.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/wide2.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/rear-iso.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/face.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/top.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/proteus/rear-laden.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/proteus/charger.png&quot; alt=&quot;drawing&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>2023-11-14</pubDate>
+        <link>http://localhost:4000/articles/2021-08/proteus</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2021-08/proteus</guid>
+        
+        
+        <category>Mechanical</category>
+        
+        <category>Software</category>
+        
+      </item>
+    
+      <item>
+        <title>Decentralized Swarm Morphogenesis</title>
+        <description>&lt;h1 id=&quot;swarms&quot;&gt;Swarms&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;ENGR3590: A Computational Introduction to Robotics, Olin College of Engineering, FA2020&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nathan Estill, Jonathan Zerez&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/animations/0.43_0.19_0.035_-0.1_10100frames.gif&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/animations/0.5_0.25_0.06_-0.124_80000frames.gif&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this project, we set out to create a simulated decentralized robot swarm that would exhibit self-assembling properties. Specifically, we wanted to replicate morphogenesis, the process by which cells are able to self-organize themselves in order to form complex tissues and organs through local interactions alone. This is of great interest to us, as decentralized systems are full of complexity, and are quite different from centralized robotic systems. Decentralized swarms offer a number of really cool advantages in that they are very robust to external noise, damage to a number of individual agents within the swarm, and unpredictable variations in the environment.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;For this project, we created a 2D simulation of simple robotic agents on a grid world. These agents are allowed to communicate and sense their nearest neighbors, and are allowed to move with discrete steps around the grid. By implementing that dictate how the robots interact with each other and how they move, we are able to get the swarm to self assemble into complex shapes.&lt;/p&gt;
+
+&lt;p&gt;We accomplished this by first implementing a simulated reaction-diffusion system among the robotic agents. This would create virtual reaction-diffusion patterns in the swarm of areas with high and low chemical concentrations. From here, we instructed robots on the edge of the swarm to move until they were able to find locations of sufficiently high chemical concentrations. The movement of the agents in some cases, helped the reaction-diffusion patterns to further evolve, driving the entire structure of the swarm to change over time.&lt;/p&gt;
+
+&lt;p&gt;This project was inspired by &lt;a href=&quot;https://robotics.sciencemag.org/content/3/25/eaau9178&quot;&gt;&lt;em&gt;Morphogenesis in Robot Swarms&lt;/em&gt;&lt;/a&gt; by I. Slavkov et. al. They successfully modeled and physically implemented a &lt;a href=&quot;https://www.k-team.com/mobile-robotics-products/kilobot&quot;&gt;Kilobot&lt;/a&gt; swarm that underwent simulated reaction-diffusion using virtual chemicals, and exhibited complex emergent behavior of self assembly. We set out to replicate this work and to see if we could produce any patterns that were more interesting.&lt;/p&gt;
+
+&lt;h2 id=&quot;theory-reaction-diffusion&quot;&gt;Theory: Reaction-Diffusion&lt;/h2&gt;
+&lt;p&gt;Reaction-Diffusion was used to create the patterns that drove the movement patterns of the robot. As it is an important part of the project, we will briefly describe what a Reaction-Diffusion system is and how it works in this section below.&lt;/p&gt;
+
+&lt;p&gt;Reaction diffusion patterns arise through a number of different phenomena: diffusion, chemical reaction, and artificial chemical limiting. In our implementation, there are two chemical concentrations that are associated with each robot in the grid. We call them chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Over time, the chemicals are allowed to diffuse, meaning that areas of high concentrations will tend to flatten out over time. Diffusion at a location is proportional to the divergence at that location.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\text{Diffusion}%20\propto%20\nabla%20\cdot%20A&quot; alt=&quot;dis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chemicals are also allowed to react with each other. In our case, chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; forms chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, as dictated by the following equation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\text{Reaction}=AB^2&quot; alt=&quot;tex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we artificially limit chemical concentrations by constantly adding in chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and constantly removing chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; in order to ensure the reaction-diffusion system can keep going without achieving a boring equilibrium point.&lt;/p&gt;
+
+&lt;p&gt;If we add all of these terms up, we find that the rate of change for chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; is:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\frac{\delta%20A}{\delta%20t}=c_A\nabla\cdot%20A-AB^2+l_A(1-A)&quot; alt=&quot;tex&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+And similarly for chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\frac{\delta%20B}{\delta%20t}=c_B\nabla\cdot%20A-AB^2+l_B(B)&quot; alt=&quot;tex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+In both equations, the first term corresponds to diffusion of the chemical and is proportional to the divergence of that chemical. The second term is the reaction, and the final term is the artificial chemical limiting. Note, we refer to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lA&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lB&lt;/code&gt; as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a_add_rate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b_add_rate&lt;/code&gt; in this project.&lt;/p&gt;
+
+&lt;p&gt;Below are some examples of reaction-diffusion patterns:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/4500_0.039_0.104.png&quot; alt=&quot;png&quot; /&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/4500_0.055_0.117.png&quot; alt=&quot;png&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ca=0.5, cb=0.25, a_add_rate=0.039, b_add_rate=-0.104&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ca=0.5, cb=0.25, a_add_rate=0.055, b_add_rate=-0.117&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For more information about Reaction-Diffusion, see our &lt;a href=&quot;https://github.com/jzerez/swarms/blob/main/writeups/blogpost1/blogpost1.md&quot;&gt;first blogpost&lt;/a&gt; on the subject.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementation-details&quot;&gt;Implementation Details&lt;/h2&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+&lt;p&gt;The project contains two main objects, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulator&lt;/code&gt; object and a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Robot&lt;/code&gt; object. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulator&lt;/code&gt; object contains all of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Robot&lt;/code&gt; objects and is responsible for managing their mutual localized sensing. Each &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Robot&lt;/code&gt; is responsible for updating itself based on the neighbors provided to it by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulator&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/BlockDiagram.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulator&lt;/code&gt; contains a 2D &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numpy&lt;/code&gt; array that contains all of the robots, as well as any empty spaces. The position of each robot is equivalent to its x and y indices in the 2d grid array. Each robot’s position is discrete and corresponds to a grid location: there is no continuous motion in the simulation.&lt;/p&gt;
+
+&lt;p&gt;The robotic agents were modeled after Kilobots. The Robot class contains its chemical concentrations of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, its position, reaction diffusion parameters, and notable kernels. Each robot is able to communicate with other nearby robots. If a robot is broadcasting a message, only robots in the eight gridspaces directly adjacent to its current position will be able to receive the message. Like Kilobots, our implemented robots are able to determine how far away the origin of a signal is, but are unable to determine what direction the signal is coming from.&lt;/p&gt;
+
+&lt;h3 id=&quot;simulation&quot;&gt;Simulation&lt;/h3&gt;
+
+&lt;p&gt;We start with a simulation of many small robots in a space. Initially, they are arranged in a circle in the center of the grid. All robots have an initial chemical concentration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A=1&lt;/code&gt;. The chemical concentration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; for each robot varies randomly from 0 to 0.1. Additionally, robots in the center of the circle are given an additional 0.1 of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; in order to get the reaction started. The initialized grid is shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/initialized_grid.png&quot; alt=&quot;Grid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After initializing the grid and the robots within it, we calculate and store the set of robots that are on the edge of the grid, as shown below. This is important as robots on the edge require extra updates for each timestep. Keeping track of which robots are on the edge of the shape ensures that we can minimize the runtime by avoiding running costly update functions on robots that don’t need it. The figure below shows in red which robots are considered to be at the edge of the swarm for the initial starting grid.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/calc_edge_robots.png&quot; alt=&quot;Edge Robots&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The simulation is tasked with updating the neighbors to each robot. Because we store the robots in a 2D array, this task is relatively simple. Getting the neighbors of a robot is an example of a task that only needs to be performed on edge robots. Robots in the center of the swarm are stationary and their neighbors do not change over time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/get_neighbors.png&quot; alt=&quot;Neighbors&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reaction-diffusion-update&quot;&gt;Reaction Diffusion Update&lt;/h3&gt;
+&lt;p&gt;At each time step, all of the robots update their chemical concentrations. To do this, we start by having each robot calculate its chemical divergence from its neighbors. This means essentially taking the difference between its own chemical concentrations and the chemical concentrations of its neighbors. This can be seen more in the figure below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/calc_div.png&quot; alt=&quot;div&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we calculate the reaction, which reduces the concentration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and increases the concentration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; as the chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; reacts to form chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then we modify the robot’s concentrations of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; based on the divergence and reaction we calculated earlier, as well as a static amount of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; that we add and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; that we remove to offset the overall reaction of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; that turns into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;robot-movement&quot;&gt;Robot Movement&lt;/h3&gt;
+&lt;p&gt;Because we want the robots to spatially form interesting shapes, they have to move in a specific way. To start, we must pick a robot that is supposed to move. We first randomly select a robot from the list of edge robots that is also not near a high concentration of chemical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; (typical threshold value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; is 0.06)&lt;/p&gt;
+
+&lt;p&gt;To move the robot, we randomly select a adjacent empty grid space that is also adjacent to another robot in the 3x3 grid. This space also cannot be the space the robot just came from. We calculate this using the following kernel and convolving it against the neighbors of the current robot, where we use 1’s to represent neighboring robots, and 0’s to represent empty grid spaces.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/images/valid_move.png&quot; alt=&quot;Valid Move&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The robot moves to this space and makes a note of all of its previous and new neighbors. Each of these neighbors recalculates whether it is on the edge or not, and we modify the edge robots set to contain any robots that are now on the edge or remove any robots that are no longer on the edge.&lt;/p&gt;
+
+&lt;p&gt;If the moving robot is now near a high concentration of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, we signal to look for a new robot in the next time step. If not, we continue to move that same robot. This results in robots clustering around high concentrations of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Technically, because the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulator&lt;/code&gt; class chooses one and only one random robot to be moving at a time, the program is technically not truly decentralized. If we had more time, we could create a method for robots to communicate their movement intentions with their neighbors in order to give rise to spontaneous and truly decentralized movement while avoiding traffic jams.&lt;/p&gt;
+
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
+&lt;p&gt;Once these code aspects were working, we changed the reaction diffusion parameters to get interesting patterns to form. We got the following patterns after a lot of fiddling with the parameters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/animations/0.5_0.25_0.06_-0.124_80000frames.gif&quot; alt=&quot;Worm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The parameters for this animation are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cA&lt;/code&gt;: 0.5&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cB&lt;/code&gt;: 0.25&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a_add_rate&lt;/code&gt;: 0.06&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b_add_rate&lt;/code&gt;: -0.124&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this simulation, we tuned the reaction diffusion patterns to give rise to a single line of high concentration that tends to grow over time. Our hope was that as the line of high concentration moved out to the edges of the shape, agents would tend to coallese around them, allowing the line of high concentration to grow further. In practice, we found that the robots do not move fast enough, and the line tends to start to curve off to the side instead. However, we still believe that this is an interesting result because the robots are clearly following the changing chemical gradient.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/animations/0.43_0.19_0.035_-0.1_10000frames.gif&quot; alt=&quot;Polka Dots&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The parameters for this animation are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cA&lt;/code&gt;: 0.43&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cB&lt;/code&gt;: 0.19&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a_add_rate&lt;/code&gt;: 0.035&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b_add_rate&lt;/code&gt;: -0.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this simulation, we tuned the reaction diffusion patterns to give rise to a series of polka dots or islands of high concentration. This is similar to the pattern used by Slavkov et. al. As the islands of high concentration move towards the edge of the shape, agents tend to from lobes centered around those islands. We believe that if we were able to tune the parameters, we accentuate how much each “lobe” sticks out, creating a more interesting shape.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/swarm-morphogenesis/animations/0.5_0.25_0.06_-0.124_80000frames_1.gif&quot; alt=&quot;Worm2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The parameters for this animation are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cA&lt;/code&gt;: 0.5&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cB&lt;/code&gt;: 0.25&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a_add_rate&lt;/code&gt;: 0.06&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b_add_rate&lt;/code&gt;: -0.124&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This simulation is similar to the first, but exhibits some interesting branching of the line of high concentration.&lt;/p&gt;
+
+&lt;p&gt;In this project, we generated a TON of different graphics and visualizations of the simulation. We created a separate gallery page where you can see the interesting visuals we’ve produced along the way. That gallery can be found &lt;a href=&quot;https://github.com/jzerez/swarms/blob/main/writeups/mainpage/gallery.md&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://science.sciencemag.org/content/sci/343/6172/754.full.pdf?ijkey=wcGE/tKMM5iGM&amp;amp;keytype=ref&amp;amp;siteid=sci&quot;&gt;TERMES&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dash.harvard.edu/bitstream/handle/1/11213398/iros11wksp-werfel.pdf?sequence=1&amp;amp;isAllowed=y&quot;&gt;TERMES Algorithm Paper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s42001-019-00037-9&quot;&gt;Dynamic Organization of flocking behaviors in a large-scale boids model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2009.14279.pdf&quot;&gt;An overview on optimal flocking&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://robotics.sciencemag.org/content/3/25/eaau9178&quot;&gt;Morphogenesis in robot swarms&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://science.sciencemag.org/content/345/6198/795.full&quot;&gt;Programmable self-assembly in a thousand-robot swarm&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>2023-11-14</pubDate>
+        <link>http://localhost:4000/articles/2020-11/swarm-morphogenesis</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-11/swarm-morphogenesis</guid>
+        
+        
+        <category>Software</category>
+        
+        <category>Simulation</category>
+        
+      </item>
     
       <item>
         <title>Sponsor Tool</title>
@@ -29,7 +245,7 @@ This is the result sheet where all of the website data found is stored.&lt;/p&gt
 
 &lt;p&gt;I’m pretty happy with this solution, as it allows anyone on the team to be able to access, interact with, and use this tool without having to know python or mess with installing environments or dependencies. And, best of all, it was really easy for me!&lt;/p&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2020-03/sponsor-tool</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-03/sponsor-tool</guid>
         
@@ -64,7 +280,7 @@ This is the result sheet where all of the website data found is stored.&lt;/p&gt
   &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2020-03/pixel-sorting</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-03/pixel-sorting</guid>
         
@@ -149,7 +365,7 @@ In order to use an ACA to effectively classify data, additional steps must be ta
 &lt;p&gt;R.S. Parpinelli, H.S. Lopes, A.A. Freitas, IEEE Transactions on Evolutionary Computation, Column: 6 Issue: 4
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2019-12/swarm-classification</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-12/swarm-classification</guid>
         
@@ -223,9 +439,9 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
 &lt;h2 id=&quot;methodology-1&quot;&gt;Methodology&lt;/h2&gt;
 &lt;p&gt;In order to see how effective each method is at increasing bike ridership, we implemented a threshold value representing how bike friendly an individual is. On one extreme, the individual will always bike between two locations, regardless of how long the bike path is. On the other extreme, the individual will always drive between two locations. In the middle is the pragmatic individual, who decides purely on the most efficient route. To implement this behavior, we weight the path lengths of taking a car versus a bike by the bike friendly parameter, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha&quot; alt=&quot;\alpha&quot; /&gt;, which ranges from zero to one, where &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%200&quot; alt=&quot;\alpha = 0&quot; /&gt; means that the user will always bike, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%201&quot; alt=&quot;\alpha = 1&quot; /&gt;  means that the user will always drive, and &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha%20%3D%200.5&quot; alt=&quot;\alpha = 0.5&quot; /&gt;  means the user will be the perfect pragmatist.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bbike%7D'%20%3D%20L_%7Bbike%7D%20*%20(1-%5Calpha)&quot; alt=&quot;L_{bike}' = L_{bike} \dot (1-\alpha)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bbike%7D&apos;%20%3D%20L_%7Bbike%7D%20*%20(1-%5Calpha)&quot; alt=&quot;L_{bike}&apos; = L_{bike} \dot (1-\alpha)&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bcar%7D'%20%3D%20L_%7Bcar%7D*%5Calpha&quot; alt=&quot;L_{car}' = L_{car}\dot\alpha&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bcar%7D&apos;%20%3D%20L_%7Bcar%7D*%5Calpha&quot; alt=&quot;L_{car}&apos; = L_{car}\dot\alpha&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bbike%7D&quot; alt=&quot;L_{bike}&quot; /&gt; is the length of the bike path, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/L_%7Bcar%7D&quot; alt=&quot;L_{car}&quot; /&gt; is the length of the car path. After the weight to each route is applied, the user then chooses the shorter of the two weighted paths. In order to get an idea for the average length of car and bike paths, we compared the reciprocal of the average directness of each method of transportation.&lt;/p&gt;
 
@@ -247,7 +463,7 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
 
 &lt;p&gt;More importantly, the graphs clearly highlight a potential reason why cities aren’t jumping to build up their bicycle networks, despite its numerous benefits. Adding additional bike paths really only makes a difference in bicycle usage for a small range of threshold values. Typically, &lt;img class=&quot;latex&quot; src=&quot;https://tex.s2cms.ru/svg/%5Calpha&quot; alt=&quot;\alpha&quot; /&gt; varies by about 0.15 as more and more edges are added. Depending on the average threshold value for a population, or the distribution of the threshold value over the population, it could potentially not make much sense to build up the bicycle network, especially if the goal of such development is to increase ridership rates. If a city is already very bicycle friendly, then adding additional paths will not increase ridership rates: most people choose to bike regardless of whether there is extra Connectedness or Directness. On the other end of the spectrum, if a city is already very car friendly, and has a very well connected car transportation network, it will take an exceedingly large number of bike lane additions to convince people to bike rather than drive.&lt;/p&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2019-10/improving-bike-networks</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-10/improving-bike-networks</guid>
         
@@ -257,12 +473,24 @@ https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=1027744&lt;/p&g
       </item>
     
       <item>
-        <title>Optimum J</title>
-        <description>&lt;p&gt;&lt;img src=&quot;../../img/optimum-J/sweep1.png&quot; alt=&quot;suspension&quot; /&gt;
-This is what the suspension model looks like in Matlab after sweeping through shock displacements!&lt;/p&gt;
+        <title>Simulation Based Optimization for Vehicle Suspension Design (Optimum-J)</title>
+        <description>&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/optimum-J/sweep2.png&quot; alt=&quot;suspension&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/optimum-J/cad.png&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;../../img/optimum-J/real_cropped.jpg&quot; alt=&quot;png&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;The suspension model in Matlab after sweeping through shock displacements&lt;/td&gt;
+      &lt;td&gt;The suspension design ported from Matlab into CAD&lt;/td&gt;
+      &lt;td&gt;The suspension in real life!&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;h2 id=&quot;background-and-introduction&quot;&gt;Background and Introduction&lt;/h2&gt;
-&lt;p&gt;I created this tool in order to automate a lot of the suspension packaging and design process for my FSAE team. In FSAE, there are a large set of rules and restrictions that are placed on the design on the chassis. These restrictions, especially those pertaining to space frames, greatly limit possibilities for suspension design. Certain tubes and nodes of the chassis must be located in certain areas, and must conform to certain configuration rules. This restricts the areas where suspension members can be mounted, and thus restricts the geometry and characteristics of the suspension. Beyond rules restrictions, other subsystems on the car also influence chassis geometry, which further constrains the problem.&lt;/p&gt;
+&lt;h2 id=&quot;background-and-motivation&quot;&gt;Background and Motivation&lt;/h2&gt;
+&lt;p&gt;I independently created this tool as a passion project to automate a lot of the suspension packaging and design process for my FSAE team. In FSAE, there are a large set of rules and restrictions that are placed on the design on the chassis. These restrictions, especially those pertaining to welded space frames, greatly limit possibilities for suspension design. Certain tubes and nodes of the chassis must be located in certain areas, and must conform to certain configuration rules. This restricts the areas where suspension members can be mounted, and thus restricts the geometry and characteristics of the suspension. Beyond rules restrictions, other subsystems on the car also influence chassis geometry, which further constrains the problem.&lt;/p&gt;
 
 &lt;p&gt;It turns out that designing a suspension system that possess the desired characteristics, but also is able to be elegantly packaged with the rest of the chassis is a very difficult and tedious process. Poor packaging can lead to lots of compliance in the suspension system, making the vehicle much harder to handle. This tool automates away this process, and automatically generates candidate suspension designs that have desirable characteristics, but follow packaging constraints.&lt;/p&gt;
 
@@ -282,26 +510,32 @@ This is what the suspension model looks like in Matlab after sweeping through sh
   &lt;li&gt;Follow good design principles (ex: avoid designs that put components into bending)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;caveats&quot;&gt;Caveats&lt;/h2&gt;
-&lt;p&gt;This isn’t a magical tool. It requires quite a lot of vehicle engineering knowledge to be used correctly. In order to get decent results, the user must define allowable regions for mounting, must define the desired characteristics, and define weights that describe how important each characteristic is relative to the others. Even then, the suspension design that’s returned is only a candidate. Additional nuanced analysis of the system is required for success.&lt;/p&gt;
+&lt;p&gt;One of my favorite features of the tool is how it forces certain members to coplanar where possible. This effectively eliminates bending loads seen by the suspension members, allowing us to reduce the size, and thus weight, of the members. Suspension members are “unsprung mass”, meaning that their weight is not supported by the vehicle’s suspension springs. In automotive design, reducing the unsprung mass of the vehicle dramatically improves handling characteristics, significantly more so than the same reduction of sprung mass. To me, this is an elegant application of my background in mechanical engineering to a largely computational project/tool.&lt;/p&gt;
+
+&lt;p&gt;All that being said, this isn’t a magical tool. It requires quite a lot of vehicle engineering knowledge to be used correctly. In order to get decent results, the user must define allowable regions for mounting, must define the desired characteristics, and define weights that describe how important each characteristic is relative to the others. Even then, the suspension design that’s returned is only a candidate. Additional nuanced analysis of the system is required for success.&lt;/p&gt;
 
 &lt;h2 id=&quot;impact&quot;&gt;Impact&lt;/h2&gt;
-&lt;p&gt;This project saved the team around 60-70 hours of design time. Unexpected chassis changes were incredibly easy to adapt to. Additionally, because the tool is able to quickly simulate the motion profile of a given suspension and measure associated characteristics, we were able to use the tool to do a parameter sensitivity study to better determine welding location tolerances. Having informed knowledge on what location coordinates were most important allowed us to design better and more effective jigging for welding.&lt;/p&gt;
+&lt;p&gt;This project saved the team around 60-70 hours of design time. Unexpected chassis changes were incredibly easy to adapt to. Additionally, because the tool is able to quickly simulate the motion profile of a given suspension and measure associated characteristics, we were able to use the tool to do a parameter sensitivity study to better determine welding location tolerances. Having informed knowledge on what location coordinates were most important allowed us to design better and more effective jigging for welding. Below is a picture of me working on the suspension in real life.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../img/optimum-J/in_action.jpg&quot; alt=&quot;me!&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the future, this tool can be integrated into a larger lap time simulation in order to capture the dynamic response of the suspension system as the car progresses through the simulated track.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
 &lt;p&gt;I modeled every suspension component as a Matlab object. Each component was completely rigid, as this was a purely geometric simulation. Each component had an effective joint that dictated how it was joined with other components. Joints could either be spherical joints with three rotational DOFs, or cylindrical joints with one rotational DOF.&lt;/p&gt;
 
-&lt;p&gt;Once all of the components are initialized and joined to the right neighbors, motion inputs are given (shock displacement or steering input), and the resulting locations and orientations of the components is calculated. Based on the range of orientations, I can calculate associated characteristics such as bump steer, or the roll center location.&lt;/p&gt;
+&lt;p&gt;Once all of the components are initialized and joined to the right neighbors, motion inputs are given (shock displacement or steering input), and the resulting locations and orientations of the components is calculated. Based on the range of orientations, I can calculate associated characteristics such as bump steer, or the roll center location. The plot below shows how tire camber (how far the top of the tire is tilted towards or away from the center of the vehicle) changes as a function of suspension travel and steering input. While calculating the motion profile of the suspension, I also interrogate the model for interference between members by giving each member of specified keep-out zone. Models with interferences are given substantial penalties in their cost function.&lt;/p&gt;
 
-&lt;p&gt;After calculating the characteristics, I compare them to the set of desired characteristics through a weighted sum. That scalar value is fed into a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fmincon()&lt;/code&gt;, matlab’s constrained optimization solver. I convert the output of the solver into a new suspension geometry which is subsequently simulated, evaluated, and fed back into the optimizer. When a decent local minimum is found, the candidate design is returned.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../img/optimum-J/optimumj_camber.jpg&quot; alt=&quot;camber plot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After calculating the characteristics, I compare them to the set of desired characteristics through a weighted sum. That scalar value is fed into matlab’s constrained optimization solver. I provided the solver with bounds for each variable based on physical constraints driven by packaging requirements. I convert the output of the solver into a new suspension geometry which is subsequently simulated, evaluated, and fed back into the optimizer. When a decent local minimum is found, the candidate design is returned.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../img/optimum-J/simulation_error_function.png&quot; alt=&quot;error function&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This problem is one of around 36 independent variables, so the state space is really really really complex. Finding a global minimum is really difficult (duh), and the quality of the final solution found by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fmincon()&lt;/code&gt; is heavily dependent on initial conditions. Because the simulation is optimized for speed, I’m able to completely ‘reseed’ the suspension geometry by randomly shuffling around the component node locations and rerunning the optimizer. This means that I can run the optimizer on a wide range of evenly sampled initial conditions to find out which ones are the most desirable.&lt;/p&gt;
+&lt;p&gt;This problem is one of around 36 independent variables, so the state space is rather complex. Finding a global minimum is really difficult (duh), and the quality of the final solution found is heavily dependent on initial conditions. Because the simulation is optimized for speed, I’m able to completely ‘reseed’ the suspension geometry by randomly shuffling around the component node locations and rerunning the optimizer. This means that I can run the optimizer on a wide range of evenly sampled initial conditions to find out which ones are the most desirable.&lt;/p&gt;
+
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2019-08/optimum-j</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-08/optimum-j</guid>
         
@@ -323,7 +557,7 @@ This is what the suspension model looks like in Matlab after sweeping through sh
 
 &lt;h2 id=&quot;high-level-design-with-matlab&quot;&gt;High level design with MATLAB&lt;/h2&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2019-01/FSAE-anti-roll-bar</guid>
         
@@ -353,7 +587,7 @@ This is what the suspension model looks like in Matlab after sweeping through sh
 
 &lt;p&gt;That being said, we made this project with the intention of helping users who are newer to CAD. The phone allows the user to more intuitively interact with the model. Additionally, the shortcuts that are displayed on the phone screen can help users better understand the common actions that one would take given the activity they’re in. This is a common challenge we found with rookie CADers: because Solidworks has so many tools, it can be daunting to find the right tools, even just for simple tasks. The phone helps to consolidate all of the most common commands for the given activity in one place in order to streamline the process. We took our project and demonstrated it to engineers and product managers at Dassault, the makers of Solidworks, and they thought it had great potential, offering us the opportunity to work on the project as interns over the summer! Unfortunately, we already had other jobs, but it was cool to get that form of validation for our idea.&lt;/p&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-12/3D-mouse-mobile-app</guid>
         
@@ -363,7 +597,7 @@ This is what the suspension model looks like in Matlab after sweeping through sh
       </item>
     
       <item>
-        <title>Neato Slam</title>
+        <title>Robotic Vacuum SLAM</title>
         <description>&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
 &lt;p&gt;This project was a culmination of various different analysis techniques learned in the class: “Quantitative Engineering Analysis”. I partner and I wrote a MATLAB script allows a robotic vacuum cleaner called a NEATO to perform SLAM, or Simultaneous Localization and Mapping. Using 2D LIDAR information and wheel encoder odometry, we attempted to navigate and map a closed loop course denoted by a series of plastic cups. Below is a gif demonstrating the robot, and some of the analysis it does in action!&lt;/p&gt;
 
@@ -401,42 +635,10 @@ This is what the suspension model looks like in Matlab after sweeping through sh
 
 &lt;p&gt;A look at a developed likelihood distribution gradient and global map of previously observed cups.&lt;/p&gt;
 </description>
-        <pubDate>2020-07-10</pubDate>
+        <pubDate>2023-11-14</pubDate>
         <link>http://localhost:4000/articles/2018-12/neato-slam</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2018-12/neato-slam</guid>
         
-        
-        <category>Software</category>
-        
-      </item>
-    
-      <item>
-        <title>CNC Stringart</title>
-        <description>
-</description>
-        <pubDate>2020-07-10</pubDate>
-        <link>http://localhost:4000/articles/2018-12/CNC-stringart</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2018-12/CNC-stringart</guid>
-        
-        
-        <category>Mechanical</category>
-        
-        <category>Art</category>
-        
-        <category>Software</category>
-        
-      </item>
-    
-      <item>
-        <title>Inverted Pendulum PID</title>
-        <description>
-</description>
-        <pubDate>2020-07-10</pubDate>
-        <link>http://localhost:4000/articles/2018-11/inverted-pendulum-PID</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2018-11/inverted-pendulum-PID</guid>
-        
-        
-        <category>Mechanical</category>
         
         <category>Software</category>
         

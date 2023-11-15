@@ -8,16 +8,16 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A partner and I created and tuned a PID controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the PID analytically by viewing th...">
+  <meta name="description" content="A partner and I created and tuned a PI controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the controller analytically by view...">
   <meta name="keywords" content="portfolio, projects, and engineering">
-  <meta name="author" content="Inverted Pendulum PID | Jonathan Zerez">
+  <meta name="author" content="Inverted Pendulum Control | Jonathan Zerez">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f5f5">
 
   <!-- Twitter Tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Inverted Pendulum PID | Jonathan Zerez">
-  <meta name="twitter:description" content="A partner and I created and tuned a PID controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the PID analytically by viewing th...">
+  <meta name="twitter:title" content="Inverted Pendulum Control | Jonathan Zerez">
+  <meta name="twitter:description" content="A partner and I created and tuned a PI controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the controller analytically by view...">
   
     <meta property="twitter:image" content="http://localhost:4000/img/leonids-logo.png">
   
@@ -25,12 +25,12 @@
   <!-- Open Graph Tags -->
   <meta property="og:type" content="blog">
   <meta property="og:url" content="http://localhost:4000/articles/2018-11/inverted-pendulum-PID">
-  <meta property="og:title" content="Inverted Pendulum PID | Jonathan Zerez">
-  <meta property="og:description" content="A partner and I created and tuned a PID controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the PID analytically by viewing th...">
+  <meta property="og:title" content="Inverted Pendulum Control | Jonathan Zerez">
+  <meta property="og:description" content="A partner and I created and tuned a PI controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the controller analytically by view...">
   
     <meta property="og:image" content="http://localhost:4000/img/leonids-logo.png">
   
-  <title>Inverted Pendulum PID | Jonathan Zerez</title>
+  <title>Inverted Pendulum Control | Jonathan Zerez</title>
 
   <!-- CSS files -->
   <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
@@ -56,12 +56,12 @@
 <div class="cover-card table-cell table-middle">
   
   <a href="http://localhost:4000/">
-    <img src="http://localhost:4000/img/profile.jpg" alt="" class="avatar mobile-hide">
+    <img src="http://localhost:4000/img/profile_new.jpg" alt="" class="avatar mobile-hide">
   </a>
   
   <a href="http://localhost:4000/" class="author_name">Jonathan Zerez</a>
-  <span class="author_job">Mechanical Engineering C/O 2021</span>
-  <span class="author_bio mbm mobile-hide">I'm a student at the Olin College of Engineering. This website is a brief showcasing of some of the various projects I've worked on</span>
+  <span class="author_job">Mechanical Design Engineer @ Amazon Robotics</span>
+  <span class="author_bio mbm mobile-hide">I'm a mechanical engineer interested in computational simulation, optimization, and design automation. This website is a brief showcasing of some of the various projects I've worked on</span>
   <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item">
@@ -71,11 +71,11 @@
       <li class="nav-item">
         <a href="http://localhost:4000/archive/">all projects</a>
       </li>
-          
+            
       <li class="nav-item">
         <a href="http://localhost:4000/categories/">Project Categories</a>
       </li>
-            
+          
       <li class="nav-item">
         <a href="http://localhost:4000/about/">About Me</a>
       </li>
@@ -107,7 +107,7 @@
     <li><a href="http://linkedin.com/in/jonathan-zerez" class="social-link-item" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a></li>
     
     
-    <li><a href="http://instagram.com/zomogr.art" class="social-link-item" target="_blank"><i class="fa fa-fw fa-instagram"></i></a></li>
+    
     
     <li><a href="http://github.com/jzerez" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
     
@@ -118,7 +118,7 @@
     
     
     
-    <li><a href="http://soundcloud.com/dell-flatitude" class="social-link-item" target="_blank"><i class="fa fa-fw fa-soundcloud"></i></a></li>
+    
     
     
     
@@ -144,8 +144,8 @@
 <div id="post">
   <hr style="border-top: 3px solid rgba(0,0,0,0.1)"/>
   <header class="post-header">
-    <h1 title="Inverted Pendulum PID">Inverted Pendulum PID</h1>
-    <p>A partner and I created and tuned a PID controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the PID analytically by viewing the transfer function of the system in the s-domain.</p>
+    <h1 title="Inverted Pendulum Control">Inverted Pendulum Control</h1>
+    <p>A partner and I created and tuned a PI controller to effectively maneuver a segway-like inverted pendulum robot. We tuned the controller analytically by viewing the transfer function of the system in the s-domain.</p>
     
     
 
@@ -178,7 +178,18 @@
   </header>
 
   <article class="post-content">
-    
+    <table>
+  <tbody>
+    <tr>
+      <td>This project was completed for my Quantitative Engineering Analysis course. In this module, pairs of students were required to derive and implement a controller to keep an inverted pendulum segway robot, named Rocky, upright. See image to the right. Additional challenges included tuning the controller to make the robot drive as fast as possible while remaining upright, as well as spin as fast as possible while remaining upright. The full report can be found above. <br /> <br />To tackle this challenge, we first derived a block diagram for the physical system to illustrate and understand how it would interact with our various controllers. In the end, we implemented controllers for robot angle, position, and velocity, as well as motor speed. The final block diagram is shown below.</td>
+      <td><img src="../../img/inverted-pendulum-PID/rocky.png" alt="rocky" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="../../img/inverted-pendulum-PID/block_diagram.png" alt="block diagram" /></p>
+
+<p>Using our block diagram, we calculated the transfer function for the entire system. We used Mathematica to find the poles of the transfer function, allowing us to quickly determine the long-term stability behavior of any set of controller constants by evaluating the signs and magnitudes of the real and imaginary components of the poles. <a href="https://www.youtube.com/watch?v=KrbPwAjVmfA">Linked is a demo video of our robot “sprinting”</a>. Camera work done by yours truly :)</p>
 
   </article>
 </div>
