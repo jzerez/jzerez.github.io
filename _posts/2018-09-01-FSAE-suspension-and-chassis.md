@@ -6,7 +6,7 @@ short_desc: I helped to design and fabricate the suspension and chassis for the 
 categories: [Mechanical, Simulation]
 featured: true
 date_string: September, 2018
-image: FSAE-suspension-and-chassis/chassis_bw_square.png
+image: FSAE-suspension-and-chassis/chassis_bw_square.PNG
 alt: pic06.jpg
 ---
 
@@ -42,7 +42,7 @@ We applied what we learned reading RCVD to design the suspension geometry. We ma
 We designed the chassis to meet rule requirements and to elegantly package all of the subsystems in the car. The largest performance gains can be through packaging improvements, reducing the overall size and weight of car. To validate the design, we analyzed the torsional rigidity of the chassis. Chasses tend to be least stiff in torsion given their aspect ratios, and having a chassis that is not stiff can reduce the handling of the vehicle and reduce the driver's ability to feel connected to the road. Chasses are loaded in torsion due to differences in roll stiffness between the front and rear of the car. We ensured that our chassis was at least 10 times stiffer than our differential role rate. 
 
 :--------------------:|:-----------------:
-![png](../../img/FSAE-suspension-and-chassis/torsion_fea.PNG) | ![png](../../img/FSAE-suspension-and-chassis/fea_results.png)
+![png](../../img/FSAE-suspension-and-chassis/torsion_fea.PNG) | ![png](../../img/FSAE-suspension-and-chassis/fea_results.PNG)
 Setup to our torsional rigidity study in ansys              | results
 
 ## Fabrication and Assembly
@@ -50,6 +50,6 @@ As mechanical lead, I spearheaded efforts for fabrication and assembly. Here are
 
 :----------------------------------------------------------:|:------------------------------------------------------------------:
 ![png](../../img/FSAE-suspension-and-chassis/welding.jpg)   | ![png](../../img/FSAE-suspension-and-chassis/welding_jig_setup.PNG)
-Welding a tab to the chassis. I'm on the right!             | That's me setting up the welding jig
+Welding a tab to the chassis. I'm on the right!             | That's me setting up the suspension welding jig
 ![png](../../img/FSAE-suspension-and-chassis/paintjob-1.jpg)| ![png](../../img/FSAE-suspension-and-chassis/in_action.jpg)
-Chassis in the painting bay                                 | That's me doing the final assembly of the rear suspension at competition
+Chassis in the painting bay                                 | Doing the final assembly of the rear suspension at competition
